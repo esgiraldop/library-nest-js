@@ -56,21 +56,21 @@ Nest is an MIT-licensed open source project. It can grow thanks to the sponsors 
 
 Nest is [MIT licensed](https://github.com/nestjs/nest/blob/master/LICENSE).
 
-# Guía de Commits
+# Commits Guide
 
-Este proyecto sigue el estándar **Conventional Commits** para mantener un historial de commits claro y estructurado. A continuación, se describen las reglas y cómo hacer commits correctamente.
+This project follows the **Conventional Commits** standard for maintaining a clear and structured commit history. The following describes the rules and how to commit correctly.
 
-## Estructura del Mensaje de Commit
+## Commit Message Structure
 
-Un mensaje de commit debe seguir la siguiente estructura:
+A commit message must follow the following structure:
 
-<tipo>[alcance opcional]: <descripción>
+<type>[optional scope]: <description>.
 
-[cuerpo opcional]
+[optional body]
 
-[pie opcional]
+[optional footer]
 
-### Ejemplo
+### Example
 
 ```bash
 feat(auth): add login functionality
@@ -82,115 +82,115 @@ Added login feature to the authentication module.
 BREAKING CHANGE: removed old login API endpoints
 ```
 
-## Tipos de Commit
+## Commit types
 
-Los tipos permitidos para el commit son los siguientes:
+The allowed commit types are as follows:
 
-- **build**: Cambios que afectan el sistema de construcción o dependencias externas (ej. webpack, npm).
-- **chore**: Cambios en el proceso de desarrollo que no afectan el código de producción (ej. configuración de herramientas).
-- **ci**: Cambios en los archivos de configuración y scripts de CI (ej. GitHub Actions, CircleCI).
-- **docs**: Cambios en la documentación (ej. README, wiki).
-- **feat**: Nueva característica para el usuario final.
-- **fix**: Corrección de un error.
-- **perf**: Cambios que mejoran el rendimiento.
-- **refactor**: Cambios en el código que no corrigen errores ni agregan características (ej. renombrar variables).
-- **style**: Cambios que no afectan el significado del código, solo la forma en que está escrito (ej. formateo).
-- **test**: Agregar pruebas o corregir pruebas existentes.
-- **revert**: Revertir un commit anterior.
+- **build**: Changes that affect the build system or external dependencies (e.g. webpack, npm).
+- chore\*\*: Changes in the development process that do not affect the production code (e.g. tool configuration).
+- CI\*\*: Changes to CI configuration files and scripts (e.g. GitHub Actions, CircleCI).
+- docs\*\*: Changes to documentation (e.g. README, wiki).
+- feat\*\*: New end-user feature.
+- fix\*\*: Bug fixes.
+- perf\*\*: Changes that improve performance.
+- refactor\*\*: Changes to code that do not fix bugs or add features (e.g. renaming variables).
+- style\*\*: Changes that do not affect the meaning of the code, only the way it is written (e.g. formatting).
+- test\*\*: Adding tests or correcting existing tests.
+- reverting\*\*: Reverting a previous commit.
 
-## Reglas de Commit
+## Commit rules
 
-- **Tipo no vacío**: El tipo del commit no debe estar vacío.
-- **Asunto no vacío**: El asunto del commit no debe estar vacío.
-- **Longitud del encabezado**: El encabezado del commit debe tener una longitud máxima de 72 caracteres.
-- **Tipo válido**: El tipo del commit debe estar en la lista de tipos permitidos.
-- **Formato del cuerpo**: El cuerpo del commit, si se incluye, debe comenzar con una línea en blanco después de la descripción y puede contener múltiples párrafos.
+- non-empty type\*\*: The type of the commit must not be empty.
+- **Non-empty subject**: The subject of the commit must not be empty.
+- Header length\*\*: The commit header must have a maximum length of 72 characters.
+- Valid type\*\*: The type of the commit must be in the list of allowed types.
+- Body formatting\*\*: The body of the commit, if included, must start with a blank line after the description and may contain multiple paragraphs.
 
-## Mensajes de Commit
+## Commit messages
 
-Aquí hay algunos ejemplos de cómo estructurar tus mensajes de commit:
+Here are some examples of how to structure your commit messages:
 t
 
-- **Agregar una nueva característica**:
+- **add a new feature**:
   feat(auth): add login functionalityty
 
-- **Corregir un error**:
+- **Fix a bug**:
   fix(parser): handle empty input
 
-- **Cambiar la API**:
+- **Change API**:
   feat(api)!: remove deprecated endpoints
 
-- **Actualizar la documentación**:
+- **Update documentation**:
   docs: update README with installation instructions
 
-- **Revertir un cambio**:
+- **Revert a change**:
   revert: let us never again speak of the noodle incident
 
 Reverts commit 676104e.
 
-## Configuración del Hook de Commit
+## Commit Hook Configuration
 
-Para garantizar que los mensajes de commit cumplan con estas reglas, utilizamos el hook de `commit-msg` proporcionado por Husky. Asegúrate de que el archivo de configuración esté presente y correctamente configurado en `.husky/commit-msg`.
+To ensure that commit messages comply with these rules, we use the `commit-msg` hook provided by Husky. Make sure the configuration file is present and correctly configured in `.husky/commit-msg`.
 
-### Archivo de Configuración de Commitlint
+### Commitlint Configuration File
 
-El archivo de configuración para `commitlint` en el proyecto está ubicado en `.commitlintrc.js` y contiene las siguientes reglas:
+The configuration file for `commitlint` in the project is located in `.commitlintrc.js` and contains the following rules:
 
 ```js
 module.exports = {
-  extends: ['@commitlint/config-conventional'],
+  extends: [‘@commitlint/config-conventional’],
   rules: {
-    'header-max-length': [2, 'always', 72],
-    'type-empty': [2, 'never'],
-    'type-enum': [
+    header-max-length': [2, “always”, 72],
+    ‘type-empty’: [2, ‘never’],
+    ‘type-enum’: [
       2,
-      'always',
+      ‘always’,
       [
-        'build',
-        'chore',
-        'ci',
-        'docs',
-        'feat',
-        'fix',
-        'perf',
-        'refactor',
-        'style',
-        'test',
-        'revert',
+        ‘build’,
+        ‘chore’,
+        ‘ci’,
+        ‘docs’,
+        ‘feat’,
+        ‘fix’,
+        ‘perf’,
+        ‘refactor’,
+        ‘style’,
+        ‘test’,
+        ‘revert’,
       ],
     ],
-    'subject-empty': [2, 'never'],
-    'subject-case': [0],
+    ‘subject-empty’: [2, ‘never’],
+    ‘subject-case’: [0],
   },
 };
 ```
 
-## Cómo Instalar y Configurar Husky
+## How to Install and Configure Husky
 
-Para instalar y configurar Husky en tu proyecto, sigue estos pasos:
+To install and configure Husky in your project, follow these steps:
 
-#### Instalar Husky:
+#### Install Husky:
 
 ```bash
 npm install husky --save-dev
 ```
 
-#### Habilitar hooks de Git:
+#### Enable Git hooks:
 
 ```bash
 npx husky install
 ```
 
-#### Agregar el hook commit-msg:
+#### Add commit-msg hook:
 
 ```bash
-npx husky add .husky/commit-msg 'npx --no-install commitlint --edit $1'
+npx husky add .husky/commit-msg ‘npx --no-install commitlint --edit $1’
 ```
 
-## Por Qué Usar Conventional Commits
+## Why Use Conventional Commits
 
-- **Generación automática de CHANGELOGs:** Facilita la creación de registros de cambios.
-- **Determinación automática del aumento de versión:** Basado en los tipos de commits realizados.
-- **Comunicación clara de los cambios:** Facilita la comprensión de los cambios para los miembros del equipo y otros interesados.
-- **Activación de procesos de construcción y publicación:** Permite automatizar la integración y entrega continua.
-- **Facilita las contribuciones:** Hace que el historial de commits sea más accesible para nuevos colaboradores.
+- Automatic generation of CHANGELOGs:\*\* Makes it easy to create changelogs.
+- Automatic determination of version incrementation:\*\* Based on the types of commits made.
+- Clear communication of changes:\*\* Facilitates understanding of changes for team members and other stakeholders.
+- Enabling build and release processes:\*\* Enables automation of continuous integration and delivery.
+- Facilitates contributions:\*\* Makes commit history more accessible to new contributors.
