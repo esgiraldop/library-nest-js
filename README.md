@@ -87,24 +87,24 @@ BREAKING CHANGE: removed old login API endpoints
 The allowed commit types are as follows:
 
 - **build**: Changes that affect the build system or external dependencies (e.g. webpack, npm).
-- chore\*\*: Changes in the development process that do not affect the production code (e.g. tool configuration).
-- CI\*\*: Changes to CI configuration files and scripts (e.g. GitHub Actions, CircleCI).
-- docs\*\*: Changes to documentation (e.g. README, wiki).
-- feat\*\*: New end-user feature.
-- fix\*\*: Bug fixes.
-- perf\*\*: Changes that improve performance.
-- refactor\*\*: Changes to code that do not fix bugs or add features (e.g. renaming variables).
-- style\*\*: Changes that do not affect the meaning of the code, only the way it is written (e.g. formatting).
-- test\*\*: Adding tests or correcting existing tests.
-- reverting\*\*: Reverting a previous commit.
+- **chore**: Changes in the development process that do not affect the production code (e.g. tool configuration).
+- **CI**: Changes to CI configuration files and scripts (e.g. GitHub Actions, CircleCI).
+- **docs**: Changes to documentation (e.g. README, wiki).
+- **feat**: New end-user feature.
+- **fix**: Bug fixes.
+- **perf**: Changes that improve performance.
+- **refactor**: Changes to code that do not fix bugs or add features (e.g. renaming variables).
+- **style**: Changes that do not affect the meaning of the code, only the way it is written (e.g. formatting).
+- **test**: Adding tests or correcting existing tests.
+- **reverting**: Reverting a previous commit.
 
 ## Commit rules
 
-- non-empty type\*\*: The type of the commit must not be empty.
+- **non-empty type**: The type of the commit must not be empty.
 - **Non-empty subject**: The subject of the commit must not be empty.
-- Header length\*\*: The commit header must have a maximum length of 72 characters.
-- Valid type\*\*: The type of the commit must be in the list of allowed types.
-- Body formatting\*\*: The body of the commit, if included, must start with a blank line after the description and may contain multiple paragraphs.
+- **Header length**: The commit header must have a maximum length of 72 characters.
+- **Valid type**: The type of the commit must be in the list of allowed types.
+- **Body formatting**: The body of the commit, if included, must start with a blank line after the description and may contain multiple paragraphs.
 
 ## Commit messages
 
