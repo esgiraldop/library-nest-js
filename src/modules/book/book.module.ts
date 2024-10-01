@@ -6,6 +6,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { CreateBookService } from './services/create-book.service';
 import { FindBookByIdService } from './services/find-book-by-id.service';
 import { FindAllBooksService } from './services/find-all-books.service';
+import { UpdateBookByIdService } from './services/update-book.service';
 
 @Module({
   imports: [TypeOrmModule.forFeature([Book])],
@@ -15,6 +16,7 @@ import { FindAllBooksService } from './services/find-all-books.service';
     CreateBookService,
     FindAllBooksService,
     FindBookByIdService,
+    UpdateBookByIdService,
   ],
 })
 export class BookModule {}

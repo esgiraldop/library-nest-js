@@ -4,6 +4,8 @@ import { CreateBookDto } from './dto/input-dtos/create-book.dto';
 import { CreateBookService } from './services/create-book.service';
 import { FindBookByIdService } from './services/find-book-by-id.service';
 import { FindAllBooksService } from './services/find-all-books.service';
+import { UpdateBookByIdService } from './services/update-book.service';
+import { UpdateBookDto } from './dto/input-dtos/update-book.dto';
 
 @Injectable()
 export class BookService {
@@ -11,22 +13,23 @@ export class BookService {
     private createBookService: CreateBookService,
     private findallBooksService: FindAllBooksService,
     private findBookByIdService: FindBookByIdService,
+    private updateBookByIdService: UpdateBookByIdService,
   ) {}
 
   async create(createBookData: CreateBookDto): Promise<Book> {
     return await this.createBookService.create(createBookData);
   }
 
-  findAll(): Promise<Book[]> {
-    return this.findallBooksService.FindAllBooks();
+  async findAll(): Promise<Book[]> {
+    return await this.findallBooksService.FindAllBooks();
   }
 
-  findOne(id: number) {
-    return this.findBookByIdService.find(id);
+  async findOne(id: number): Promise<Book> {
+    return await this.findBookByIdService.find(id);
   }
 
-  update(id: number) {
-    return `This action updates a #${id} book`;
+  async update(id: number, newBookData: UpdateBookDto): Promise<Book> {
+    return this.updateBookByIdService.update(id, newBookData);
   }
 
   remove(id: number) {
