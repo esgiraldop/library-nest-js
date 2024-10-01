@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.24](https://github.com/esgiraldop/library-nest-js/compare/v0.0.23...v0.0.24) (2024-10-01)
+
+### [0.0.23](https://github.com/esgiraldop/library-nest-js/compare/v0.0.22...v0.0.23) (2024-10-01)
+
+### [0.0.22](https://github.com/esgiraldop/library-nest-js/compare/v0.0.21...v0.0.22) (2024-10-01)
+
+### [0.0.21](https://github.com/esgiraldop/library-nest-js/compare/v0.0.20...v0.0.21) (2024-10-01)
+
+
+### Features
+
+* create delete service for books ([6fd5018](https://github.com/esgiraldop/library-nest-js/commit/6fd5018f8ed6eb14bc7e5028777a8ea59af01897))
+
 ### [0.0.20](https://github.com/esgiraldop/library-nest-js/compare/v0.0.19...v0.0.20) (2024-10-01)
 
 

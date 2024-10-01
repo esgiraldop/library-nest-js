@@ -6,6 +6,7 @@ import { FindBookByIdService } from './services/find-book-by-id.service';
 import { FindAllBooksService } from './services/find-all-books.service';
 import { UpdateBookByIdService } from './services/update-book.service';
 import { UpdateBookDto } from './dto/input-dtos/update-book.dto';
+import { DeleteBookService } from './services/delete-book.service';
 
 @Injectable()
 export class BookService {
@@ -14,6 +15,7 @@ export class BookService {
     private findallBooksService: FindAllBooksService,
     private findBookByIdService: FindBookByIdService,
     private updateBookByIdService: UpdateBookByIdService,
+    private deleteBookService: DeleteBookService,
   ) {}
 
   async create(createBookData: CreateBookDto): Promise<Book> {
@@ -32,7 +34,7 @@ export class BookService {
     return this.updateBookByIdService.update(id, newBookData);
   }
 
-  remove(id: number) {
-    return `This action removes a #${id} book`;
+  async delete(id: number) {
+    return this.deleteBookService.delete(id);
   }
 }
