@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.14](https://github.com/esgiraldop/library-nest-js/compare/v0.0.11...v0.0.14) (2024-10-01)
+
+
+### Features
+
+* **book:** create endpoint for getting a book by id ([5826cdc](https://github.com/esgiraldop/library-nest-js/commit/5826cdcc8ecce9907d8e4ef5945b3441ff288342))
+
 ### [0.0.13](https://github.com/esgiraldop/library-nest-js/compare/v0.0.11...v0.0.13) (2024-10-01)
 
 
