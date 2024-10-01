@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.6](https://github.com/esgiraldop/library-nest-js/compare/v0.0.5...v0.0.6) (2024-10-01)
+
+
+### Features
+
+* **book:** implemented find all books ([2faea44](https://github.com/esgiraldop/library-nest-js/commit/2faea4444eaf1c6db06ca43144253c0013230438))
+
 ### [0.0.5](https://github.com/esgiraldop/library-nest-js/compare/v0.0.4...v0.0.5) (2024-09-30)
 
 
