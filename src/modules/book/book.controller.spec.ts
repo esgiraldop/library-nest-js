@@ -3,6 +3,7 @@ import { BookController } from './book.controller';
 import { BookService } from './book.service';
 import { CreateBookService } from './services/create-book.service';
 import { FindAllBooksService } from './services/find-all-books.service';
+import { FindBookByIdService } from './services/find-book-by-id.service';
 
 const mockBookRepository = { find: jest.fn(), save: jest.fn() };
 
@@ -17,6 +18,7 @@ describe('BookController', () => {
         CreateBookService,
         FindAllBooksService,
         { provide: 'BookRepository', useValue: mockBookRepository },
+        FindBookByIdService,
       ],
     }).compile();
 
