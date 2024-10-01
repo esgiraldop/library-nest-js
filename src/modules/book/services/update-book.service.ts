@@ -13,9 +13,7 @@ export class UpdateBookByIdService {
   async update(bookId: number, newBookData: UpdateBookDto): Promise<Book> {
     const crrntBookData = await this.bookRepository.findOneBy({ id: bookId });
     if (!crrntBookData) {
-      throw new ConflictException({
-        message: `The book with id ${bookId} does not exist`,
-      });
+      throw new ConflictException(`The book with id ${bookId} does not exist`);
     }
 
     await this.bookRepository.update(bookId, newBookData);
