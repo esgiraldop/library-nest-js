@@ -4,8 +4,8 @@ import { BookController } from './book.controller';
 import { Book } from './entities/book.entity';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { CreateBookService } from './services/create-book.service';
-import { FindAllBooksService } from './services/find-all-books.service';
 import { FindBookByIdService } from './services/find-book-by-id.service';
+import { FindAllBooksService } from './services/find-all-books.service';
 
 @Module({
   imports: [TypeOrmModule.forFeature([Book])],
