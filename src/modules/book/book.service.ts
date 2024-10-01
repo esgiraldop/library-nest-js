@@ -2,17 +2,21 @@ import { Injectable } from '@nestjs/common';
 import { Book } from './entities/book.entity';
 import { CreateBookDto } from './dto/input-dtos/create-book.dto';
 import { CreateBookService } from './dto/services/create-book.service';
+import { FindAllBooksService } from './dto/services/find-all-books.service';
 
 @Injectable()
 export class BookService {
-  constructor(private createBookService: CreateBookService) {}
+  constructor(
+    private createBookService: CreateBookService,
+    private findallBooksService: FindAllBooksService,
+  ) {}
 
   async create(createBookData: CreateBookDto): Promise<Book> {
     return await this.createBookService.create(createBookData);
   }
 
-  findAll() {
-    return `This action returns all book`;
+  findAll(): Promise<Book[]> {
+    return this.findallBooksService.FindAllBooks();
   }
 
   findOne(id: number) {
