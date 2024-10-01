@@ -13,7 +13,7 @@ export class FindAllBooksService {
     const allBooks = await this.bookRepository.find();
 
     if (!allBooks.length) {
-      throw new ConflictException({ message: 'There are no books available' });
+      throw new ConflictException('There are no books available');
     }
 
     return allBooks;

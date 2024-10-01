@@ -12,15 +12,13 @@ export class DeleteBookService {
   async delete(bookId: number) {
     const crrntBookData = await this.bookRepository.findOneBy({ id: bookId });
     if (!crrntBookData) {
-      throw new ConflictException({
-        message: `The book with id ${bookId} does not exist`,
-      });
+      throw new ConflictException(`The book with id ${bookId} does not exist`);
     }
 
     const deleteResponse = await this.bookRepository.delete(bookId);
 
     if (deleteResponse.affected < 1) {
-      throw new ConflictException({ message: 'No book could be deleted' });
+      throw new ConflictException('No book could be deleted');
     }
 
     return `Book with id ${bookId} deleted successfully`;
