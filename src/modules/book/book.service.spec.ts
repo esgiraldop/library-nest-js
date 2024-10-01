@@ -1,6 +1,7 @@
 import { Test, TestingModule } from '@nestjs/testing';
 import { BookService } from './book.service';
-import { CreateBookService } from './dto/services/create-book.service';
+import { CreateBookService } from './services/create-book.service';
+import { FindAllBooksService } from './services/find-all-books.service';
 
 const mockBookRepository = {
   // You can add mock implementations for any methods you'll be using.
@@ -16,6 +17,7 @@ describe('BookService', () => {
       providers: [
         BookService,
         CreateBookService,
+        FindAllBooksService,
         {
           provide: 'BookRepository',
           useValue: mockBookRepository, // Use the mock for BookRepository
