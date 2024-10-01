@@ -1,8 +1,8 @@
 import { Injectable } from '@nestjs/common';
 import { Book } from './entities/book.entity';
 import { CreateBookDto } from './dto/input-dtos/create-book.dto';
-import { CreateBookService } from './dto/services/create-book.service';
-import { FindAllBooksService } from './dto/services/find-all-books.service';
+import { CreateBookService } from './services/create-book.service';
+import { FindAllBooksService } from './services/find-all-books.service';
 
 @Injectable()
 export class BookService {

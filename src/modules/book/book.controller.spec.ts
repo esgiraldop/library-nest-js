@@ -1,8 +1,8 @@
 import { Test, TestingModule } from '@nestjs/testing';
 import { BookController } from './book.controller';
 import { BookService } from './book.service';
-import { CreateBookService } from './dto/services/create-book.service';
-import { FindAllBooksService } from './dto/services/find-all-books.service';
+import { CreateBookService } from './services/create-book.service';
+import { FindAllBooksService } from './services/find-all-books.service';
 
 const mockBookRepository = { find: jest.fn(), save: jest.fn() };
 
