@@ -3,6 +3,7 @@ import { BookService } from './book.service';
 import { CreateBookService } from './services/create-book.service';
 import { FindBookByIdService } from './services/find-book-by-id.service';
 import { FindAllBooksService } from './services/find-all-books.service';
+import { UpdateBookByIdService } from './services/update-book.service';
 
 const mockBookRepository = {
   // You can add mock implementations for any methods you'll be using.
@@ -24,6 +25,7 @@ describe('BookService', () => {
           useValue: mockBookRepository, // Use the mock for BookRepository
         },
         FindBookByIdService,
+        UpdateBookByIdService,
       ],
     }).compile();
 
