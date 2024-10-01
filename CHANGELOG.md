@@ -4,24 +4,21 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### [0.0.14](https://github.com/esgiraldop/library-nest-js/compare/v0.0.11...v0.0.14) (2024-10-01)
 
-
 ### Features
 
-* **book:** create endpoint for getting a book by id ([5826cdc](https://github.com/esgiraldop/library-nest-js/commit/5826cdcc8ecce9907d8e4ef5945b3441ff288342))
+- **book:** create endpoint for getting a book by id ([5826cdc](https://github.com/esgiraldop/library-nest-js/commit/5826cdcc8ecce9907d8e4ef5945b3441ff288342))
 
 ### [0.0.13](https://github.com/esgiraldop/library-nest-js/compare/v0.0.11...v0.0.13) (2024-10-01)
 
-
 ### Features
 
-* **book:** create endpoint for getting a book by id ([5826cdc](https://github.com/esgiraldop/library-nest-js/commit/5826cdcc8ecce9907d8e4ef5945b3441ff288342))
+- **book:** create endpoint for getting a book by id ([5826cdc](https://github.com/esgiraldop/library-nest-js/commit/5826cdcc8ecce9907d8e4ef5945b3441ff288342))
 
 ### [0.0.12](https://github.com/esgiraldop/library-nest-js/compare/v0.0.11...v0.0.12) (2024-10-01)
 
-
 ### Features
 
-* **book:** create endpoint for getting a book by id ([5826cdc](https://github.com/esgiraldop/library-nest-js/commit/5826cdcc8ecce9907d8e4ef5945b3441ff288342))
+- **book:** create endpoint for getting a book by id ([5826cdc](https://github.com/esgiraldop/library-nest-js/commit/5826cdcc8ecce9907d8e4ef5945b3441ff288342))
 
 ### [0.0.11](https://github.com/esgiraldop/library-nest-js/compare/v0.0.10...v0.0.11) (2024-10-01)
 
@@ -35,17 +32,15 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### [0.0.6](https://github.com/esgiraldop/library-nest-js/compare/v0.0.5...v0.0.6) (2024-10-01)
 
-
 ### Features
 
-* **book:** implemented find all books ([2faea44](https://github.com/esgiraldop/library-nest-js/commit/2faea4444eaf1c6db06ca43144253c0013230438))
+- **book:** implemented find all books ([2faea44](https://github.com/esgiraldop/library-nest-js/commit/2faea4444eaf1c6db06ca43144253c0013230438))
 
 ### [0.0.5](https://github.com/esgiraldop/library-nest-js/compare/v0.0.4...v0.0.5) (2024-09-30)
 
-
 ### Features
 
-* **book:** implement database connection and creat book service ([01d56e6](https://github.com/esgiraldop/library-nest-js/commit/01d56e6d76ce40df44b3ded7199a39bc1322b4a8))
+- **book:** implement database connection and creat book service ([01d56e6](https://github.com/esgiraldop/library-nest-js/commit/01d56e6d76ce40df44b3ded7199a39bc1322b4a8))
 
 ### [0.0.4](https://github.com/esgiraldop/library-nest-js/compare/v0.0.3...v0.0.4) (2024-09-26)
 
