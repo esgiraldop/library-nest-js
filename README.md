@@ -1,4 +1,4 @@
-## Project setup
+# Project setup
 
 ```bash
 $ yarn install
@@ -194,3 +194,25 @@ npx husky add .husky/commit-msg ‘npx --no-install commitlint --edit $1’
 - Clear communication of changes:\*\* Facilitates understanding of changes for team members and other stakeholders.
 - Enabling build and release processes:\*\* Enables automation of continuous integration and delivery.
 - Facilitates contributions:\*\* Makes commit history more accessible to new contributors.
+
+# Architectural pattern used in the project: Hexagonal architecture
+
+In hexagonal architecture, the bussiness logic is separated from the external systems, such as databases, web frameworks, messaging systems, etc. Nest.js does this through it's modularity, layered structure and dependency injection, and every functionality is contained within itself and injected in other dependant functionalities.
+
+## Jira
+
+## Jira before starting the project
+
+![alt text](image.png)
+
+## Jira after finishing the project
+
+![alt text](image-1.png)
+
+# User flow diagram
+
+![alt text](image-2.png)
+
+# Entity relationship diagram
+
+![alt text](image-3.png)
