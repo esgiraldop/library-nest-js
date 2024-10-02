@@ -1,6 +1,4 @@
 import { Module } from '@nestjs/common';
-import { AppController } from './app.controller';
-import { AppService } from './app.service';
 import { BookModule } from './modules/book/book.module';
 import { ConfigModule } from '@nestjs/config';
 import { DatabaseConfigService } from './common/config/database.config';
@@ -19,7 +17,5 @@ import { EnvConfig } from './common/config/env.config';
     }),
     BookModule,
   ],
-  controllers: [AppController],
-  providers: [AppService],
 })
 export class AppModule {}
