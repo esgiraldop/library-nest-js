@@ -12,7 +12,7 @@ import { BookService } from './book.service';
 import { CreateBookDto } from './dto/input-dtos/create-book.dto';
 import { UpdateBookDto } from './dto/input-dtos/update-book.dto';
 import { ApiKeyAuthGuard } from 'src/common/guards/api-key.guard';
-import { ApiHeader, ApiTags } from '@nestjs/swagger';
+import { ApiHeader, ApiResponse, ApiTags } from '@nestjs/swagger';
 
 @ApiTags('library')
 @Controller('book')
@@ -22,6 +22,10 @@ export class BookController {
   @ApiHeader({
     name: 'x-api-key',
     description: 'Header for the API key',
+  })
+  @ApiResponse({
+    status: 201,
+    description: 'The record has been successfully created.',
   })
   @UseGuards(ApiKeyAuthGuard)
   @Post()
