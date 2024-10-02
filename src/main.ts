@@ -2,6 +2,7 @@ import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
 import { DataSource } from 'typeorm';
 import { GlobalValidationPipe } from './common/pipes/validation.pipe';
+import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
@@ -13,7 +14,14 @@ async function bootstrap() {
   } else {
     console.log('There was an error connecting to the database');
   }
-
+  const config = new DocumentBuilder()
+    .setTitle('Library API')
+    .setDescription('This API helps users')
+    .setVersion('1.0')
+    .addTag('library')
+    .build();
+  const document = SwaggerModule.createDocument(app, config);
+  SwaggerModule.setup('api', app, document);
   await app.listen(3000, () =>
     console.log(`Application running on port ${3000}`),
   );

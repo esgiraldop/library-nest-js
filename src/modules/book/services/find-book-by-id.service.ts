@@ -14,9 +14,7 @@ export class FindBookByIdService {
       where: { id: bookId },
     });
     if (!bookResponse) {
-      throw new ConflictException({
-        message: `The book with id ${bookId} does not exists`,
-      });
+      throw new ConflictException(`The book with id ${bookId} does not exists`);
     }
     return bookResponse;
   }
