@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.26](https://github.com/esgiraldop/library-nest-js/compare/v0.0.25...v0.0.26) (2024-10-01)
+
+
+### Features
+
+* Implement x-api-key guard ([c4fd28b](https://github.com/esgiraldop/library-nest-js/commit/c4fd28bc772f8539ee9ea64b2582d8c3a320afc8))
+
 ### [0.0.25](https://github.com/esgiraldop/library-nest-js/compare/v0.0.24...v0.0.25) (2024-10-01)
 
 ### [0.0.24](https://github.com/esgiraldop/library-nest-js/compare/v0.0.23...v0.0.24) (2024-10-01)
