@@ -15,7 +15,7 @@ export class DatabaseConfigService implements TypeOrmOptionsFactory {
       password: databaseConfig.password,
       database: databaseConfig.database,
       autoLoadEntities: true,
-      synchronize: true, // Solo para desarrollo; no usar en producción
+      synchronize: false, // Solo para desarrollo; no usar en producción
       logging: true, // Habilita el logging
       logger: 'advanced-console', // Configura el logger para mostrar consultas SQL
     };
